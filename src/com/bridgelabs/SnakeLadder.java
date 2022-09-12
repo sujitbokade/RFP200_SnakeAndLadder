@@ -7,6 +7,7 @@ public class SnakeLadder {
         int ladder = 1;
         int snake = 2;
         int position = 0;
+        int die = 0;
         while (position < 100) {
             int dice = (int) (Math.random() * 10) % 6 + 1;
             System.out.println("Dice " + dice);
@@ -30,6 +31,8 @@ public class SnakeLadder {
                 position -= dice;
             }
             System.out.println("Position " + position);
+            die++;
         }
+        System.out.println("Total Number of Time Dice Rolled "+die);
     }
 }
