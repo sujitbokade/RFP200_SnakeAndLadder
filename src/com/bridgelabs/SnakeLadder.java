@@ -7,24 +7,26 @@ public class SnakeLadder {
         int ladder = 1;
         int snake = 2;
         int position = 0;
-        int dice = (int) (Math.random() * 10) % 6 + 1;
-        System.out.println("Dice " + dice);
-        int optionCheck = (int) (Math.random() * 10) % 3;
-        System.out.println("Option " + optionCheck);
+        while (position < 100) {
+            int dice = (int) (Math.random() * 10) % 6 + 1;
+            System.out.println("Dice " + dice);
+            int optionCheck = (int) (Math.random() * 10) % 3;
+            System.out.println("Option " + optionCheck);
 
-        if (optionCheck == ladder) {
-            System.out.println("Get Ladder");
-            position += dice;
-        } else if (optionCheck == snake) {
-            System.out.println("Get Snake");
-            position -= dice;
-        } else {
-            System.out.println("NO Play");
-            position = position;
+            if (optionCheck == ladder) {
+                System.out.println("Get Ladder");
+                position += dice;
+            } else if (optionCheck == snake) {
+                System.out.println("Get Snake");
+                position -= dice;
+            } else {
+                System.out.println("NO Play");
+                position = position;
+            }
+            if (position < 0) {
+                position = 0;
+            }
+            System.out.println("Position " + position);
         }
-        if (position < 0) {
-            position = 0;
-        }
-        System.out.println("Position " + position);
     }
 }
