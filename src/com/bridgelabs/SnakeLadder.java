@@ -69,7 +69,7 @@ public class SnakeLadder {
     }
 
     static int rollDie() {
-        return (int) (Math.random() * 10 % 6);
+        return (int) (Math.random() * 10 % 6 + 1);
     }
 
     static int checkOption() {
